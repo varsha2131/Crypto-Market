@@ -1,140 +1,65 @@
-import React from "react";
-import styles from "../../styles/home.module.css";
-import { TbCirclePercentageFilled } from "react-icons/tb";
-import { PiStarFourFill } from "react-icons/pi";
+import React from 'react';
+import styles from '../../styles/home.module.css'; // Importing CSS module for home page styling
 
-// Import images
-import atmCard from "../assets/Atmcard.jpg";
-//import handImage from "../assets/Handsymbol.png";
-import bitcoinChart from "../assets/Chart.png";
-import downloadAppImage from "../assets/Downloadapp.png";
-import registerImage from "../assets/Register.png";
-import connectWalletImage from "../assets/Wallet.png";
-import startTradingImage from "../assets/Starttrading.png";
-
-// Import Components
-import About from "./About";
-
-// Reusable Statistic Component
-const Statistic = ({ value, label }) => (
-  <div className={styles.stat}>
-    <span className={styles.value} style={{ color: "#36BB91" }}>
-      {value}
-    </span>
-    <br />
-    {label}
-  </div>
-);
-
-// Reusable Card Component
-const FeatureCard = ({ image, title, description }) => (
-  <div className={styles.worksCard}>
-    <img src={image} alt={title} className={styles.cardImage} />
-    <h3 className={styles.cardTitle}>{title}</h3>
-    <p className={styles.cardText}>{description}</p>
+// Reusable Card Component for displaying features
+const FeatureCard = ({ title, description, icon }) => (
+  <div className={styles.featureCard}>
+    <div className={styles.iconWrapper}>
+      <img src={icon} alt={title} className={styles.featureIcon} />
+    </div>
+    <h3 className={styles.featureTitle}>{title}</h3>
+    <p className={styles.featureDescription}>{description}</p>
   </div>
 );
 
 const Home = () => {
   return (
-    <>
+    <div className={styles.homeContainer}>
       {/* Hero Section */}
-      <section className={styles.container}>
-        <div className={styles.textSection}>
-          <h1 className={styles.heading}>
-          The Easiest Way To <br />
-          Buy,Sell  Your <br />
-          CryptoCurrency
-          </h1>
-          <button className={styles.startButton}>Explore </button>
-          
+      <section className={styles.heroSection}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroHeading}>Trade Cryptocurrency with Ease</h1>
+          <p className={styles.heroSubHeading}>
+            Fast, secure, and easy way to buy and sell Bitcoin, Ethereum, and more.
+          </p>
+          <button className={styles.heroButton}>Get Started</button>
         </div>
-        <div className={styles.imageSection}>
-           
-          <img src={atmCard} alt="ATM Card" className={styles.atmCard} />
+        <div className={styles.heroImage}>
+          <img src="https://unblast.com/wp-content/uploads/2023/01/Cryptocurrencies-Exchange-Isometric-Illustration-1024x819.jpg" alt="Crypto Trading" />
         </div>
       </section>
 
-      {/* Earning Section */}
-      <section className={styles.earningSection}>
-        <div className={styles.earningContent}>
-          <div className={styles.leftContent}>
-            <div className={styles.earnTitle}>EARN CRYPTO</div>
-            <h2 className={styles.heading}>
-              Deposit crypto earn{" "}
-              <PiStarFourFill className={styles.staricon} />{" "}
-              <span className={styles.highlight}>interest</span>
-            </h2>
-            <p>Choose from 150+ cryptocurrencies</p>
-            <div className={styles.interestRates}>
-              <Statistic value="15%" label="On cryptos" />
-              <Statistic value="40%" label="On stablecoins" />
-            </div>
-          </div>
-
-          {/* Bitcoin Chart */}
-          <div className={styles.rightContent}>
-            <div className={styles.chartContainer}>
-              <div className={styles.chartDetails}>
-                <div className={styles.chartHeader}>
-                  <span className={styles.chartTitle}>Bitcoin Chart</span>
-                  <div className={styles.chartNav}>
-                    {["1W", "1M", "3M", "1Y", "All"].map((period) => (
-                      <span key={period}>{period}</span>
-                    ))}
-                  </div>
-                </div>
-                <div className={styles.chartValue}>
-                  1,087.91 <span className={styles.currency}>EUR</span>
-                </div>
-              </div>
-              <img src={bitcoinChart} alt="Bitcoin Chart" className={styles.bitcoinChart} />
-            </div>
-          </div>
-        </div>
+      {/* Call to Action (CTA) Section */}
+      <section className={styles.ctaSection}>
+        <h2 className={styles.ctaHeading}>Ready to Start Trading?</h2>
+        <p className={styles.ctaText}>
+          Join our community today and begin trading cryptocurrencies with ease and security.
+        </p>
+        <button className={styles.ctaButton}>Sign Up Now</button>
       </section>
 
-      {/* How it Works Section */}
-      <section className={styles.worksContainer}>
-        <div className={styles.worksContent}>
-          <div className={styles.worksHeader}>
-            <div className={styles.features}>FEATURES</div>
-            <h2 className={styles.howItWorks}>How it works</h2>
-            <p className={styles.worksDescription}>
-              Cryptocurrency markets have seen an increase in volume in recent
-              weeks, which is a great opportunity for new traders.
-            </p>
-          </div>
-
-          {/* Features Cards */}
-          <div className={styles.worksCards}>
-            <FeatureCard
-              image={downloadAppImage}
-              title="Download App"
-              description="Trade Bitcoin, Ethereum, USDT and other altcoins using our crypto trading app."
-            />
-            <FeatureCard
-              image={registerImage}
-              title="Register"
-              description="Trade Bitcoin, Ethereum, USDT and other altcoins using our crypto trading app."
-            />
-            <FeatureCard
-              image={connectWalletImage}
-              title="Connect Wallet"
-              description="Trade Bitcoin, Ethereum, USDT and other altcoins using our crypto trading app."
-            />
-            <FeatureCard
-              image={startTradingImage}
-              title="Start Trading"
-              description="Trade Bitcoin, Ethereum, USDT and other altcoins using our crypto trading app."
-            />
-          </div>
+      {/* Features Section */}
+      <section className={styles.featuresSection}>
+        <h2 className={styles.featuresHeading}>Why Choose Us?</h2>
+        <div className={styles.featuresGrid}>
+          <FeatureCard
+            title="Easy Registration"
+            description="Sign up and start trading in just a few minutes. No complicated setup!"
+            icon="https://bitcoinist.com/wp-content/uploads/2018/08/AdobeStock_197910537-1.jpeg"
+          />
+          <FeatureCard
+            title="Secure Trading"
+            description="Our platform is built with top-level security features to protect your funds."
+            icon="https://img.freepik.com/premium-vector/secure-trading-vector-logo-design-illustration_733947-2165.jpg?w=2000"
+          />
+          <FeatureCard
+            title="24/7 Support"
+            description="Our customer support is always available to assist you whenever you need."
+            icon="https://static.vecteezy.com/system/resources/previews/003/805/401/original/service-24-7-concept-call-center-support-illustration-flat-vector.jpg"
+          />
         </div>
       </section>
-
-      {/* About Section */}
-      <About />
-    </>
+    </div>
   );
 };
 

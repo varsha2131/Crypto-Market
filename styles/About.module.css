@@ -1,107 +1,185 @@
-/* About.module.css */
+/* about.module.css */
 
+/* Main container */
 .aboutContainer {
-    display: flex;
-    width: 1460px; /* Set a specific width */
-    margin: 0 auto; /* Center the container */
-    padding: 80px; /* Adjust padding */
-    /* Match background color */
-    align-items: flex-start; /* Align items to the top */
-    margin-top: 120px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: transparent;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
 
-  }
-  
-  .textColumn {
-    flex: 1;
-    padding-right: 80px; /* Adjust spacing */
-    margin-top: 100px;
-  }
-  
-  .title {
-    font-size: 30px; /* Adjust font size */
-    font-weight: bold;
-    color:#36BB91; /* Match title color */
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 18px; /* Adjust font size */
-    color: white; /* Match description color */
-    margin-bottom: 30px;
-  }
-  
-  .marketDescription {
-    font-size: 20px; /* Adjust font size */
-    font-weight: bold;
-    color: white; /* Match color */
-    line-height: 1.6; /* Improve readability */
-    margin-bottom: 40px;
-  }
-  
-  .featureList {
-    list-style: none; /* Remove bullet points */
-    padding: 0;
-  }
-  
-  .featureItem {
-    font-size: 16px; /* Adjust font size */
-    color:white; /* Match color */
-    margin-bottom: 15px;
-    position: relative; /* For positioning the checkmark */
-    padding-left: 30px; /* Space for the checkmark */
-  }
-  
-  .featureItem::before { /* Create the checkmark */
-    content: ""; /* Checkmark character */
-    position: absolute;
-    left: 0;
-    top: 0%;
-    transform: translateY(-50%);
-    color: #00aa00; /* Green color */
-    font-weight: bold;
-    font-size: 50px;
-  }
-  
-  .imageColumn {
-    flex: 1;
-    position: relative;
-    text-align: center;
-  }
-  
-  .secureImage {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .coin {
-    width: 80px; /* Adjust coin size */
-    height: auto;
-    position: absolute;
-    z-index: 2;
-    animation: coinAnimation 3s linear infinite; 
-  }
-  
-  .coinLeft {
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%); /* Center the coin */
-  }
-  
-  .coinRight {
-    top: 20%;
-    left: 75%; /* Adjust left for Ethereum position */
-    transform: translate(-50%, -50%); /* Center the coin */
-  }
-  @keyframes coinAnimation {
-    0% {
-      transform: translate(-50%, -50%) translateY(0); /* Start at original position */
-    }
-    50% {
-      transform: translate(-50%, -50%) translateY(-10px); /* Move up */
-    }
-    100% {
-      transform: translate(-50%, -50%) translateY(0); /* Back to original position */
-    }
-  }
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #2c3e50;
+}
+.header p {
+  color: black;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+/* Mission Section */
+.missionSection {
+  margin-bottom: 60px;
+}
+
+.missionContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.missionSection h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.missionSection p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: black;
+  text-align: center;
+}
+
+/* Team Section */
+.teamSection {
+  margin-bottom: 60px;
+}
+
+.teamSection h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.teamMembers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.memberCard {
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.memberImage {
+  width: 100px;         /* Set width */
+  height: 100px;        /* Set height */
+  border-radius: 50%;   /* Ensures circular shape */
+  object-fit: cover;    /* Ensures image fills the circle */
+  margin-bottom: 15px;  /* Space between image and text */
+  max-width: 100%;      /* Prevents images from being too large */
+  max-height: 100%;     /* Prevents images from being too large */
+}
+
+
+.memberCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.memberIcon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+
+.memberCard h3 {
+  font-size: 22px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.memberCard p {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 16px;
+  color: black;
+}
+
+.footer p {
+  margin: 0;
+}
+ 
+/* Services Section */
+.servicesSection {
+  text-align: center; /* Centers the section text */
+  margin: 40px auto;
+}
+
+.servicesSection h2 {
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.servicesList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid layout */
+  gap: 30px;
+  justify-items: center; /* Centers the list items within the grid */
+}
+
+.serviceItem {
+  font-size: 18px;
+  color: black;
+  display: flex;
+  align-items: center; /* Aligns icon with text */
+  gap: 10px; /* Adds space between icon and text */
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styling */
+.serviceItem i {
+  font-size: 24px;
+  color: black;
+}
+
+
+

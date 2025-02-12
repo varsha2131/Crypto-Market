@@ -1,43 +1,77 @@
 import React from 'react';
-import styles from '../../styles/About.module.css';
-import coin1 from '../assets/Coin-1.png'; // Path to your coin image
-import coin2 from '../assets/Coin-2.png'; // Path to your coin image
-import secureImage from '../assets/Whyusimage.jpg'; // Path to your image
-import Testimonials from '../components/common/Testimonials';
-import FAQ from '../components/common/FAQ';
-import { FaCircleDot } from "react-icons/fa6";
-import Team from '../components/common/Team';
+import styles from '../../styles/about.module.css';
+import mike from '../assets/mike.png';
+import max from '../assets/max.png';
+import kate from '../assets/kate.png';
+
+
 
 const About = () => {
   return (
-    <>
-    <section className={styles.aboutContainer}>
-      <div className={styles.textColumn}>
-        <h2 className={styles.title}>Why Choose Crypto</h2>
-         
-        <p className={styles.marketDescription}>
-          The Bitcoin and cryptocurrency markets have experienced a surge in volume recently,
-          making it an exciting time to become a trader.
+    <div className={styles.aboutContainer}>
+      <header className={styles.header}>
+        <h1>About CryptoPro</h1>
+        <p>Your trusted partner in the world of cryptocurrency</p>
+      </header>
+
+      <section className={styles.missionSection}>
+        <h2>Our Mission</h2>
+        <p>
+          At CryptoPro, we aim to empower individuals to explore, invest, and manage their cryptocurrency portfolios with ease.
+          Our goal is to provide reliable, up-to-date information and advanced tools to help you navigate the crypto market securely.
         </p>
-        <ul className={styles.featureList}>
-          <li className={styles.featureItem}> <span className='text-success mx-3'><FaCircleDot />
-          </span>Fast</li>
-          <li className={styles.featureItem}><span className="text-success mx-3"><FaCircleDot />
-          </span>Secure</li>
-          <li className={styles.featureItem}> <span className="text-success mx-3"><FaCircleDot />
-          </span>Support</li>
+      </section>
+
+      <section className={styles.teamSection}>
+        <h2>Meet Our Team</h2>
+        <div className={styles.teamMembers}>
+          <div className={styles.memberCard}>
+            <img src={mike} alt="Team Member 1" className={styles.memberImage} />
+            <h3>John Doe</h3>
+            <p>CEO & Founder</p>
+          </div>
+          <div className={styles.memberCard}>
+            <img src={max} alt="Team Member 2" className={styles.memberImage} />
+            <h3>Jane Smith</h3>
+            <p>Lead Developer</p>
+          </div>
+          <div className={styles.memberCard}>
+            <img src={kate} alt="Team Member 3" className={styles.memberImage} />
+            <h3>Lee Rosy</h3>
+            <p>Blockchain Expert</p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.servicesSection}>
+        <h2>Our Services</h2>
+        <ul className={styles.servicesList}>
+          <li className={styles.serviceItem}>
+            <i className="fas fa-chart-line"></i> {/* Add icon for service */}
+            Real-time Crypto Market Data
+          </li>
+          <li className={styles.serviceItem}>
+            <i className="fas fa-wallet"></i> {/* Add icon for service */}
+            Advanced Portfolio Management
+          </li>
+          <li className={styles.serviceItem}>
+            <i className="fas fa-newspaper"></i> {/* Add icon for service */}
+            Cryptocurrency News and Trends
+          </li>
+          <li className={styles.serviceItem}>
+            <i className="fas fa-lock"></i> {/* Add icon for service */}
+            Secure Transactions and Wallet Services
+          </li>
+          
         </ul>
-      </div>
-      <div className={styles.imageColumn}>
-        <img src={coin1} alt="Bitcoin" className={styles.coin + ' ' + styles.coinLeft} />
-        <img src={secureImage} alt="Secure illustration" className={styles.secureImage} />
-        <img src={coin2} alt="Ethereum" className={styles.coin + ' ' + styles.coinRight} />
-      </div>
-    </section>
-   
-    <Team/>
-    <FAQ />
-    </>
+      </section>
+      
+
+
+      <footer className={styles.footer}>
+        <p>&copy; 2025 CryptoPro. All Rights Reserved.</p>
+      </footer>
+    </div>
   );
 };
 

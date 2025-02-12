@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="row">
         <div className="col-12 col-sm-12 col-md-3 col-lg-3">
           <div className='footer-links'>
-            <NavLink className="navbar-brand fw-bold fs-3" to='' >CryptoAdda</NavLink>
-            <p>&copy;2025 CryptoAdda </p>
+            <NavLink className="navbar-brand fw-bold fs-3" to='' >CryptoPro</NavLink>
+            <p>&copy;2025 CryptoPro </p>
             <p className='social-media-links d-flex  '>
               <a href='' className='nav-link text-primary fs-2'> <i class="bi bi-facebook"></i></a>
               <a href='' className='nav-link text-danger fs-2'> <i class="bi bi-instagram mx-2"></i></a>

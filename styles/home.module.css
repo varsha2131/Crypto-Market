@@ -1,0 +1,363 @@
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 70vh; /* Make sure container takes full viewport height */
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 20px;
+   
+   
+   
+  }
+  
+  .textSection {
+    flex: 1; /* Takes up available space */
+   padding-left: 200px;
+   margin-top: -140px;
+   margin-left: -120px;
+    
+  }
+  
+  .offer {
+     /* Example offer background color */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: inline-block; /* To make it fit content width */
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+  }
+  
+  .startButton {
+    background-color: #36BB91; /* Example button color */
+    color: white;
+    padding: 10px 40px ;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: -140px;
+   margin-left: 80px;
+     
+  }
+  
+   
+  
+  .imageSection {
+    flex: 1;
+    position: relative; /* Important: Needed for absolute positioning of the card */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    padding-left: 100px;
+    padding-top: 20px;
+  }
+  
+ 
+.atmCard {
+    width: 600px; /* Adjust as needed */
+    position: absolute; /* Position the card over the hand */
+    top: 45%; /* Vertically center the card */
+    left: 45%; /* Horizontally center the card */
+    transform: translate(-50%, -60%); /* Adjust position for better placement */
+    z-index: 1; /* Ensure card is on top of the hand */
+    animation: bounce 5s infinite ease-in-out; /* Apply bounce animation */
+    border-radius: 10px;
+  }
+  
+   
+   
+   
+  .heading {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    padding: 10px 25px; /* Reduce top padding */
+    margin-top: -20px; /* Moves the text up */
+}
+
+   
+  .valueuser{
+    font-size: 2.5rem;
+    font-weight: bold;
+ 
+  }
+  .wallet{
+    font-size: 2.5rem;
+    font-weight: bold;
+    
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translate(-50%, -60%); /* Maintain horizontal center */
+    }
+    40%, 60% {
+      transform: translate(-50%, -70%); /* Adjust bounce height */
+    }
+  }
+
+
+  /* second card stylings */
+  .earningSection {
+    width: 100%;
+    height: 500px;
+   
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 40px; /* Add padding around content */
+  }
+  
+  .earningContent {
+    display: flex;
+    width: 90%; /* Occupy most of the container width */
+    max-width: 1200px; /* Set a maximum width */
+    align-items: center; /* Vertically center content */
+  }
+  
+  
+  .leftContent {
+    flex: 1; /* Takes up available space */
+    color: white; /* White text */
+    padding-right: 40px; /* Add spacing between left and right content */
+  }
+  
+  .earnTitle {
+    color:#36BB91; /* Grayish title color */
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    
+    
+  }
+  .highlight{
+    color: #36BB91;
+    font-weight: bold;
+  }
+  
+  
+  
+  p {
+    color: #8A9198; /* Lighter text color */
+    margin-bottom: 30px;
+  }
+  
+  .interestRates {
+    display: flex;
+  }
+  
+  .rate {
+    margin-right: 40px;
+  }
+  
+  .rateValue {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #36BB91;
+  }
+  
+  .rateLabel {
+    color: #8A9198;
+    font-size: 1rem;
+  }
+  
+  .rightContent {
+    flex: 1; /* Takes up available space */
+    display: flex;
+    flex-direction: column; /* Arrange charts vertically */
+    gap: 20px; /* Add spacing between charts */
+  }
+  
+  .chartContainer {
+    background-color: #282C34; /* Slightly lighter background for charts */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Align chart content vertically */
+  }
+  
+  .chartDetails {
+    display: flex;
+    flex-direction: column; /* Align chart content vertically */
+  }
+  
+  .chartHeader {
+    display: flex;
+    justify-content: space-between; /* Space title and navigation */
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  
+  .chartTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .chartNav {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .chartNav span {
+    color: #5A626B;
+    cursor: pointer;
+  }
+  
+  .chartValue {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .currency {
+    color: #8A9198;
+    margin-left: 5px;
+  }
+  
+  .bitcoinChart, .ethereumChart {
+    width: 100%; /* Make charts responsive */
+    height: auto;
+    margin-bottom: 10px; /* Add spacing below charts */
+  }
+
+
+
+  /* third section css stylings */
+
+  .worksContainer {
+    
+    padding: 40px;
+    text-align: center; /* Center content horizontally */
+  }
+  
+  .worksContent {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .worksHeader {
+    margin-bottom: 40px;
+  }
+  
+  .features {
+    color: #36BB91;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .howItWorks {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold
+  }
+  
+  .worksDescription {
+    color: #8A9198;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  
+  .worksCards {
+    display: flex;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the cards */
+  }
+  
+  .worksCard {
+    background-color: #1A1E25; /* Light grayish background */
+    border-radius: 10px;
+    padding: 30px;
+    flex: 1; /* Equal width for cards */
+    text-align: center; /* Center content within cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth hover effect */
+  }
+  /* -----------------------------------------imp------------------------------------- */
+  .worksCard:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+  }
+  
+  .cardImage {
+    width: 150px; /* Adjust image size as needed */
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .cardTitle {
+    color: white; /* Darker title color */
+    margin-bottom: 10px;
+  }
+  
+  .cardText {
+    color: #b4adad; /* Slightly lighter text color */
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  /* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Stack elements vertically */
+      height: auto; /* Allow height to adjust */
+      margin-top: 50px; /* Adjust margin for smaller screens */
+      margin-bottom: 50px; /* Adjust margin for smaller screens */
+  }
+
+  .textSection {
+      padding-left: 20px; /* Reduce padding on smaller screens */
+      padding-right: 20px; /* Add padding on the right */
+  }
+
+  .imageSection {
+      padding-left: 0; /* Remove left padding */
+      padding-top: 20px; /* Maintain top padding */
+  }
+
+  .atmCard {
+      width: 80%; /* Make the card responsive */
+  }
+
+  h1 {
+      font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .startButton {
+      width: 100%; /* Make button full width */
+      padding: 10px; /* Adjust padding */
+  }
+
+  .earningSection {
+      flex-direction: column; /* Stack earning content vertically */
+  }
+
+  .earningContent {
+      flex-direction: column; /* Stack content vertically */
+      width: 100%; /* Full width */
+  }
+
+  .leftContent, .rightContent {
+      padding-right: 0; /* Remove right padding */
+      padding-left: 0; /* Remove left padding */
+  }
+
+  .worksCards {
+      flex-direction: column; /* Stack cards vertically */
+      gap: 10px; /* Reduce gap */
+  }
+
+  .worksCard {
+      width: 100%; /* Make cards full width */
+  }
+}

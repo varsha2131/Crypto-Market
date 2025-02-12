@@ -1,0 +1,82 @@
+.faqSection {
+    padding: 20px;
+   
+    
+    
+  }
+  
+  .faqContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1A1E25;
+    padding: 30px;
+    border-radius: 25px;
+  }
+  
+  .faqTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color:whitesmoke;
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+  }
+  
+  .faqDescription {
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 10px;
+    text-align: center; /* Center the description */
+  }
+  
+  .faqMarketDescription {
+    font-size: 20px;
+    color: rgb(234, 229, 229);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center; /* Center the market description */
+  }
+  
+  .faqGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Two columns */
+    gap: 40px; /* Spacing between grid items */
+  }
+  
+  .faqItem {
+    border-bottom: 1px solid #fff4f4; /* Separator line */
+    padding-bottom: 20px;
+  }
+  
+  .questionContainer {
+    display: flex;
+    justify-content: space-between; /* Question and toggle icon */
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .faqQuestion {
+    font-size: 18px;
+    color: white;
+  }
+  
+  .toggleIcon {
+    font-size: 20px;
+    color: white;
+    cursor: pointer; /* Make it a pointer on hover */
+    transition: transform 0.2s ease; /* Smooth rotation (optional) */
+  }
+  
+  .faqAnswer {
+    font-size: 16px;
+    color: whitesmoke;
+    line-height: 1.6;
+    padding-top: 10px;
+  }
+
+  
+  .questionContainer:focus .toggleIcon {
+    transform: rotate(90deg); /* Rotate 90 degrees clockwise */
+    
+  }
+ 

@@ -1,0 +1,150 @@
+.testimonialsSection {
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    align-items: center; /* Center horizontally */
+    padding: 80px; /* Adjust padding */
+     /* Match background color */
+  }
+  
+  .testimonialContent {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    margin-bottom: 30px; /* Space between content and cards */
+    background-color:#1A1E25;
+    border-radius: 20px;
+    width: 1440px;
+    padding-left: 140px; /* Adjust padding */
+    
+  }
+  
+  .testimonialImage {
+    max-width: 400px; /* Adjust image width */
+    height: auto;
+    margin-right: 60px; /* Space between image and text */
+  }
+  
+  .testimonialText {
+    text-align: left; /* Align text to the left */
+  }
+  
+  .testimonialTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #36BB91;
+    margin-bottom: 20px;
+  }
+  
+  .testimonialDescription {
+    font-size: 27px;
+    color: white;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .learnMoreButton {
+    background-color: #36BB91; /* Blue button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  .reviewCards {
+    display: flex;
+    justify-content: space-between; /* Space cards evenly */
+    width: 100%; /* Make cards container full width */
+  }
+  
+  .reviewCard {
+    width: 30%; /* Adjust card width */
+    background-color: #1A1E25;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: center; /* Center text within card */
+  }
+  .reviewCard:hover{
+    transform: translateY(-5px);
+  }
+  
+  .cardStars {
+    font-size: 24px;
+    color: gold; /* Gold stars */
+    margin-bottom: 20px;
+  }
+  
+  .cardText {
+    font-size: 16px;
+    color: gray;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .cardUser {
+    display: flex;
+    align-items: center; /* Vertically center user info */
+    justify-content: center; /* Horizontally center user info */
+  }
+  
+  .userImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make user image circular */
+    margin-right: 30px;
+  }
+  
+  .userInfo {
+    text-align: left; /* Align user info to the left */
+  }
+  
+  .userName {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .userRole {
+    font-size: 14px;
+    color: gray;
+  }
+  /* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .testimonialContent {
+      flex-direction: column; /* Stack image and text vertically */
+      padding-left: 20px; /* Reduce padding */
+      width: 100%; /* Full width for smaller screens */
+  }
+
+  .testimonialImage {
+      max-width: 100%; /* Make image responsive */
+      margin-right: 0; /* Remove right margin */
+      margin-bottom: 20px; /* Add space below image */
+  }
+
+  .testimonialTitle {
+      font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .testimonialDescription {
+      font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .learnMoreButton {
+      width: 100%; /* Make button full width */
+      padding: 10px; /* Adjust padding */
+  }
+
+  .reviewCards {
+      flex-direction: column; /* Stack cards vertically */
+      gap: 20px; /* Space between cards */
+  }
+
+  .reviewCard {
+      width: 100%; /* Make cards full width */
+      padding: 20px; /* Adjust padding */
+  }
+}

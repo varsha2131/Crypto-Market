@@ -1,0 +1,107 @@
+/* About.module.css */
+
+.aboutContainer {
+    display: flex;
+    width: 1460px; /* Set a specific width */
+    margin: 0 auto; /* Center the container */
+    padding: 80px; /* Adjust padding */
+    /* Match background color */
+    align-items: flex-start; /* Align items to the top */
+    margin-top: 120px;
+
+  }
+  
+  .textColumn {
+    flex: 1;
+    padding-right: 80px; /* Adjust spacing */
+    margin-top: 100px;
+  }
+  
+  .title {
+    font-size: 30px; /* Adjust font size */
+    font-weight: bold;
+    color:#36BB91; /* Match title color */
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 18px; /* Adjust font size */
+    color: white; /* Match description color */
+    margin-bottom: 30px;
+  }
+  
+  .marketDescription {
+    font-size: 20px; /* Adjust font size */
+    font-weight: bold;
+    color: white; /* Match color */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 40px;
+  }
+  
+  .featureList {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  .featureItem {
+    font-size: 16px; /* Adjust font size */
+    color:white; /* Match color */
+    margin-bottom: 15px;
+    position: relative; /* For positioning the checkmark */
+    padding-left: 30px; /* Space for the checkmark */
+  }
+  
+  .featureItem::before { /* Create the checkmark */
+    content: ""; /* Checkmark character */
+    position: absolute;
+    left: 0;
+    top: 0%;
+    transform: translateY(-50%);
+    color: #00aa00; /* Green color */
+    font-weight: bold;
+    font-size: 50px;
+  }
+  
+  .imageColumn {
+    flex: 1;
+    position: relative;
+    text-align: center;
+  }
+  
+  .secureImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .coin {
+    width: 80px; /* Adjust coin size */
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    animation: coinAnimation 3s linear infinite; 
+  }
+  
+  .coinLeft {
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%); /* Center the coin */
+  }
+  
+  .coinRight {
+    top: 20%;
+    left: 75%; /* Adjust left for Ethereum position */
+    transform: translate(-50%, -50%); /* Center the coin */
+  }
+  @keyframes coinAnimation {
+    0% {
+      transform: translate(-50%, -50%) translateY(0); /* Start at original position */
+    }
+    50% {
+      transform: translate(-50%, -50%) translateY(-10px); /* Move up */
+    }
+    100% {
+      transform: translate(-50%, -50%) translateY(0); /* Back to original position */
+    }
+  }

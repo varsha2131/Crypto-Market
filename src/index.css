@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "popins",serif;
+    font-weight: 500;
+    font-style: normal;
+}
+body{
+    background-color: #A9C9FF;
+    background-image: linear-gradient(90deg, #A9C9FF 0%, #FFBBEC 100%);
+
+}
+/*navbar-styles*/
+.navbar-brand{
+    text-transform: uppercase;
+    background: #121FCF;
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.home{
+  padding: 0px 10px;
+  padding-bottom: 100px;
+
+}
+.hero{
+  max-width: 600px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap:30px;
+}
+.hero{
+  font-size: max (4vw,36px);
+}
+.hero p{
+  width: 75%;
+  color: #e3e3e3;
+  line-height: 1.5;
+
+}
+.hero form{
+  padding: 8px;
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:10px;
+}
+.hero input{
+  flex: 1;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+}
+.hero button{
+  border: none;
+  background: #7927ff;
+  color: white;
+  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ /* General styles for the About CryptoAdda page */
+.about-cryptoadda {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers all child elements horizontally */
+  justify-content: center; /* Centers content vertically */
+  min-height: 100vh; /* Makes the container take full height of the viewport */
+  margin: 0;
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+/* Section styles */
+.section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px; /* Set max-width for centered content */
+  text-align: center; /* Centers text inside each section */
+}
+
+/* Section Heading */
+.section h2 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Section Paragraphs */
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center; /* Ensures text is centered */
+}
+
+/* Links */
+.section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section ul li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.section ul li a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.section ul li a:hover {
+  color: #2980b9;
+}
+
+/* Adding responsiveness */
+@media (max-width: 768px) {
+  .about-cryptoadda {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 15px;
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+}
+/* Overall container styling */
+.contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4; /* Light background */
+  padding: 20px;
+  margin: 0;
+}
+
+/* Content wrapper styling */
+.contact-content {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact-content h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.contact-content p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.contact-content p:first-child {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.contact-content p:nth-child(2),
+.contact-content p:nth-child(3) {
+  margin-top: 10px;
+}
+
+.about-cryptoadda .section {
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease; /* Smooth transition */
+  border: 1px solid #ddd; /* Optional: Add border */
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.about-cryptoadda .section:hover {
+  background-color: #f5f5f5; /* Light grey background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.about-cryptoadda .section h2 {
+  color: #333; /* Default color for h2 */
+}
+
+.about-cryptoadda .section:hover h2 {
+  color: #007bff; /* Change h2 color to blue on hover */
+}
+
+
+
+
+
+
+
+
+
+
+

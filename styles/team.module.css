@@ -1,0 +1,86 @@
+.teamContainer {
+    background-color:transparent; /* Dark background */
+    padding: 40px;
+    text-align: center; /* Center content */
+    color: white; /* Text color */
+  }
+  
+  .teamContent {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .teamHeader {
+    margin-bottom: 40px;
+  }
+  
+  .teamTitle {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .teamHeading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .teamDescription {
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  
+  .teamMembers {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to new lines */
+    justify-content: center; /* Center the members */
+    gap: 20px;
+  }
+  
+  .teamMember {
+    width: 250px; /* Adjust width as needed */
+    text-align: center; /* Center content within each member */
+  }
+  
+  .memberImage {
+    width: 150px; /* Adjust image size */
+    height: 150px;
+    border-radius: 50%; /* Make images circular */
+    margin-bottom: 10px;
+  }
+  
+  .memberName {
+    margin-bottom: 5px;
+  }
+  
+  .memberRole {
+    color: #8A9198;
+    font-size: 0.9rem;
+  }
+  
+  /* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .teamMembers {
+      flex-direction: column; /* Stack members vertically */
+      align-items: center; /* Center members */
+  }
+
+  .teamMember {
+      width: 100%; /* Make members full width */
+      margin-bottom: 20px; /* Add spacing between members */
+  }
+
+  .teamHeading {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .teamTitle {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .teamDescription {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}

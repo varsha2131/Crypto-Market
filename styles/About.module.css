@@ -17,6 +17,7 @@
   margin-bottom: 50px;
   color: #2c3e50;
 }
+
 .header p {
   color: black;
 }
@@ -58,6 +59,62 @@
   text-align: center;
 }
 
+/* About Section - Modified Layout (Image on the Right) */
+.aboutImageSection {
+  display: flex;
+  justify-content: space-between; /* Align items on both sides */
+  align-items: center; /* Vertically align the text and image */
+  margin-bottom: 60px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.aboutText {
+  flex: 1;
+  padding-right: 30px; /* Space between the text and image */
+  text-align: center;
+  
+}
+
+.aboutText h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.aboutText p {
+  font-size: 18px;
+  color: black;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* Image Styling for the Right Side */
+.animatedImage {
+  flex: 1;
+  max-width: 150px;  /* Ensure the image has a max width */
+  animation: fadeInUp 2s ease-out; /* Smooth animation */
+  border-radius: 10px;
+  margin-left: 30px;  /* Add space between text and image */
+  object-fit: cover;  /* Ensure the image covers the area without distortion */
+}
+
+/* Animation for Image */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(200px); /* Start with a bigger offset */
+    opacity: 0; /* Completely transparent at the start */
+  }
+  50% {
+    transform: translateY(-40px); /* Slightly move up before settling */
+    opacity: 1.5; /* Midway, the image is semi-visible */
+  }
+  100% {
+    transform: translateY(0); /* Final position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+
 /* Team Section */
 .teamSection {
   margin-bottom: 60px;
@@ -88,6 +145,7 @@
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .memberImage {
   width: 100px;         /* Set width */
   height: 100px;        /* Set height */
@@ -98,20 +156,10 @@
   max-height: 100%;     /* Prevents images from being too large */
 }
 
-
 .memberCard:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-
-.memberIcon {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
 
 .memberCard h3 {
   font-size: 22px;
@@ -180,6 +228,3 @@
   font-size: 24px;
   color: black;
 }
-
-
-

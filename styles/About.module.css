@@ -2,12 +2,11 @@
 
 /* Main container */
 .aboutContainer {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  background-color: transparent;
-  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  color: #333; /* Darker text color */
   max-width: 1200px;
   margin: 0 auto;
+  padding: 60px 20px;
   border-radius: 10px;
 }
 
@@ -15,23 +14,58 @@
 .header {
   text-align: center;
   margin-bottom: 50px;
-  color: #2c3e50;
+  color: #2c3e50; /* Darker header text */
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #2c3e50; /* Dark header color */
 }
 
 .header p {
-  color: black;
-}
-
-.title {
-  font-size: 48px;
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-.subtitle {
-  font-size: 20px;
-  color: #7f8c8d;
+  color: #4f5b66; /* Slightly darker text for description */
+  font-size: 18px;
   margin-top: 10px;
+}
+
+.header p:last-child {
+  color: #333; /* Darker color for the last paragraph */
+  margin-top: 10px;
+}
+
+/* About Image Section */
+.aboutImageSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+/* About Image Section */
+.aboutImageSection {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the image horizontally */
+  margin-bottom: 60px;
+}
+
+.aboutImageSection img {
+  width: 100%;
+  max-width: 300px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+
+.aboutText {
+  width: 45%;
+  text-align: left;
+}
+
+.aboutText p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4f5b66; /* Slightly darker text color for readability */
 }
 
 /* Mission Section */
@@ -39,15 +73,9 @@
   margin-bottom: 60px;
 }
 
-.missionContent {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .missionSection h2 {
-  font-size: 32px;
-  color: #2c3e50;
+  font-size: 36px;
+  color: #2c3e50; /* Darker title color */
   margin-bottom: 20px;
   text-align: center;
 }
@@ -55,74 +83,34 @@
 .missionSection p {
   font-size: 18px;
   line-height: 1.7;
-  color: black;
+  color: #4f5b66; /* Darker mission text */
   text-align: center;
 }
 
-/* About Section - Modified Layout (Image on the Right) */
-.aboutImageSection {
-  display: flex;
-  justify-content: space-between; /* Align items on both sides */
-  align-items: center; /* Vertically align the text and image */
-  margin-bottom: 60px;
-  flex-wrap: wrap; /* Ensures responsiveness */
-}
-
-.aboutText {
-  flex: 1;
-  padding-right: 30px; /* Space between the text and image */
+.missionSection ul {
+  list-style: none;
+  padding: 0;
   text-align: center;
-  
 }
 
-.aboutText h2 {
-  font-size: 32px;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-.aboutText p {
+.missionSection li {
   font-size: 18px;
-  color: black;
-  line-height: 1.7;
-  text-align: left;
+  color: #333; /* Darker list item text */
+  margin-bottom: 15px;
 }
 
-/* Image Styling for the Right Side */
-.animatedImage {
-  flex: 1;
-  max-width: 150px;  /* Ensure the image has a max width */
-  animation: fadeInUp 2s ease-out; /* Smooth animation */
-  border-radius: 10px;
-  margin-left: 30px;  /* Add space between text and image */
-  object-fit: cover;  /* Ensure the image covers the area without distortion */
+.missionSection li strong {
+  font-weight: bold;
 }
-
-/* Animation for Image */
-@keyframes fadeInUp {
-  0% {
-    transform: translateY(200px); /* Start with a bigger offset */
-    opacity: 0; /* Completely transparent at the start */
-  }
-  50% {
-    transform: translateY(-40px); /* Slightly move up before settling */
-    opacity: 1.5; /* Midway, the image is semi-visible */
-  }
-  100% {
-    transform: translateY(0); /* Final position */
-    opacity: 1; /* Fully visible */
-  }
-}
-
 
 /* Team Section */
 .teamSection {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .teamSection h2 {
-  font-size: 32px;
-  color: #2c3e50;
+  font-size: 36px;
+  color: #2c3e50; /* Darker title color */
   margin-bottom: 20px;
   text-align: center;
 }
@@ -131,15 +119,14 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   margin-top: 20px;
   justify-content: center;
 }
 
 .memberCard {
-  background-color: transparent;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 250px;
   padding: 20px;
@@ -147,13 +134,11 @@
 }
 
 .memberImage {
-  width: 100px;         /* Set width */
-  height: 100px;        /* Set height */
-  border-radius: 50%;   /* Ensures circular shape */
-  object-fit: cover;    /* Ensures image fills the circle */
-  margin-bottom: 15px;  /* Space between image and text */
-  max-width: 100%;      /* Prevents images from being too large */
-  max-height: 100%;     /* Prevents images from being too large */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
 .memberCard:hover {
@@ -163,36 +148,24 @@
 
 .memberCard h3 {
   font-size: 22px;
-  color: black;
+  color: #2c3e50; /* Darker name color */
   margin-bottom: 10px;
 }
 
 .memberCard p {
   font-size: 16px;
-  color: #7f8c8d;
+  color: #4f5b66; /* Darker description color */
 }
 
-/* Footer Section */
-.footer {
-  text-align: center;
-  margin-top: 60px;
-  font-size: 16px;
-  color: black;
-}
-
-.footer p {
-  margin: 0;
-}
- 
 /* Services Section */
 .servicesSection {
-  text-align: center; /* Centers the section text */
-  margin: 40px auto;
+  text-align: center;
+  margin: 60px auto;
 }
 
 .servicesSection h2 {
   font-size: 36px;
-  color: #2c3e50;
+  color: #2c3e50; /* Darker title color */
   margin-bottom: 30px;
 }
 
@@ -207,12 +180,12 @@
 
 .serviceItem {
   font-size: 18px;
-  color: black;
+  color: #333; /* Darker text color */
   display: flex;
   align-items: center; /* Aligns icon with text */
-  gap: 10px; /* Adds space between icon and text */
+  gap: 10px;
   padding: 10px;
-  background-color: transparent;
+
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -223,8 +196,31 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Icon Styling */
 .serviceItem i {
   font-size: 24px;
-  color: black;
+  color: #7f8c8d;
+}
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 16px;
+  color: #333; /* Darker footer text */
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Animation for Image */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

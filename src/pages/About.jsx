@@ -16,15 +16,9 @@ const About = () => {
           Whether you're a beginner or an experienced trader, we are here to help you stay ahead of the curve in the rapidly evolving digital asset world.
         </p>
       </header>
-
       {/* Add image with animation */}
       <section className={styles.aboutImageSection}>
-        <div className={styles.aboutText}>
-           
-          <p>
-            CryptoPro is a platform that combines advanced technology with cryptocurrency expertise, helping users navigate the ever-evolving world of digital assets.
-          </p>
-        </div>
+        
         <img src={ coin} alt="CryptoPro" className={styles.animatedImage} />
       </section>
 
@@ -34,9 +28,7 @@ const About = () => {
           At CryptoPro, we aim to empower individuals to explore, invest, and manage their cryptocurrency portfolios with ease. 
           Our goal is to provide reliable, up-to-date information and advanced tools to help you navigate the crypto market securely.
         </p>
-        <p>
-          Our mission is built on three core pillars:
-        </p>
+
         <ul>
           <li><strong>Education</strong>: Offering easy-to-understand educational content for users to learn about cryptocurrency, blockchain technology, and market analysis.</li>
           <li><strong>Security</strong>: Implementing the highest standards of security to protect your investments, transactions, and personal information.</li>

@@ -1,11 +1,29 @@
-/* home.module.css */
-
-/* Container for the entire home page */
+/* Main container for the home page */
 .homeContainer {
   font-family: Arial, sans-serif;
-  color: #333;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 40px 20px;
+}
+.heroImage {
+  position: relative; /* To position the overlay on top of the image */
+}
+
+.heroImage img {
+  width: 100%; /* Make the image full width */
+  height: auto;
+  display: block; /* Remove any gaps below the image */
+}
+
+.heroImage::before {
+  content: ""; /* Create an empty pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  z-index: 1; /* Place it above the image */
 }
 
 /* Hero Section */
@@ -13,8 +31,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 20px;
-  flex-wrap: wrap; /* Allows for responsiveness */
+  margin-bottom: 60px;
+  
+  padding: 40px;
+  border-radius: 10px;
 }
 
 .heroContent {
@@ -22,186 +42,188 @@
 }
 
 .heroHeading {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: bold;
+  color: black;
   margin-bottom: 20px;
-  color: #2c3e50;
 }
 
 .heroSubHeading {
   font-size: 18px;
+  color: white;
   margin-bottom: 30px;
-  color: #7f8c8d;
 }
 
 .heroButton {
-  padding: 12px 25px;
+  padding: 15px 30px;
+  background-color: green;
+  color: #fff;
   font-size: 16px;
-  background-color: #007bff;
-  color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  
-  /* Center the button */
-  display: block;
-  margin: 20px auto; /* Horizontally centers the button */
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 .heroButton:hover {
-  background-color: #0056b3;
-}
-
-.heroImage {
-  max-width: 50%;
-  margin-left: 20px; /* This will push the image to the right side */
-  background-color: transparent;
+  background-color: #34495e;
 }
 
 .heroImage img {
   max-width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  height: auto;
-  transition: all 0.5s ease;
-  
-}
-
-.heroImage {
-  width: 446px; /* Adjust as needed */
-  position: absolute; /* Position the card over the hand */
-  top: 55%; /* Vertically center the card */
-  right: -12%; /* Horizontally center the card */
-  transform: translate(-50%, -60%); /* Adjust position for better placement */
-  animation: bounce 5s infinite ease-in-out; /* Apply bounce animation */
-  border-radius: 90px;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translate(-50%, -60%); /* Maintain horizontal center */
-  }
-  40%, 60% {
-    transform: translate(-50%, -70%); /* Adjust bounce height */
-  }
-}
-
-/* Call to Action Section */
-.ctaSection {
-  gap: 10px;
-  padding: 50px 20px;
-  text-align: center;
-  /* background-color: #007bff; */ /* Removed background color */
-  color: white;
-}
-
-.ctaHeading {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #2c3e50;
-  
-}
-
-.ctaText {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #7f8c8d;
-}
-
-.ctaButton {
-  padding: 14px 30px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.ctaButton:hover {
-  background-color: #0056b3;
-  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Features Section */
 .featuresSection {
-  padding: 60px 20px;
   text-align: center;
-  /* background-color: #f1f1f1; */ /* Removed background color */
+  margin-bottom: 60px;
 }
 
 .featuresHeading {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: bold;
-  margin-bottom: 40px;
   color: #2c3e50;
+  margin-bottom: 30px;
 }
 
 .featuresGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-items: center;
 }
 
+/* Feature Card */
 .featureCard {
-  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  text-align: center; /* Center content including image */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .featureCard:hover {
   transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .iconWrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .featureIcon {
-  width: 160px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 .featureTitle {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 24px;
+  color: black;
+  margin-bottom: 15px;
 }
 
 .featureDescription {
-  font-size: 14px;
-  color: #666;
+  font-size: 16px;
+  color: black;
+  line-height: 1.6;
 }
 
-/* Media Query for responsiveness */
-@media (max-width: 768px) {
-  .heroSection {
-    flex-direction: column;
-    align-items: center;
-  }
+/* How It Works Section */
+.howItWorksSection {
+  
+  padding: 60px 20px;
+}
 
-  .heroContent {
-    max-width: 100%;
-    text-align: center;
-  }
+.howItWorksHeading {
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 30px;
+  text-align: center;
+}
 
-  .heroHeading {
-    font-size: 30px;
-  }
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
 
-  .heroSubHeading {
-    font-size: 16px;
-  }
+.stepCard {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .featuresGrid {
-    grid-template-columns: 1fr;
-  }
+.stepCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stepCard h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.stepCard p {
+  font-size: 16px;
+  color: black;
+}
+/* Team Section */
+.teamSection {
+  margin-bottom: 30px;
+}
+
+.teamSection h2 {
+  font-size: 36px;
+  color: #2c3e50; /* Darker title color */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.teamMembers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.memberCard {
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.memberImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.memberCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.memberCard h3 {
+  font-size: 22px;
+  color: #2c3e50; /* Darker name color */
+  margin-bottom: 10px;
+}
+
+.memberCard p {
+  font-size: 16px;
+  color: #4f5b66; /* Darker description color */
 }
